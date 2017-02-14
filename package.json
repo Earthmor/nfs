@@ -1,7 +1,7 @@
 {
-  "name": "TeamSearch-FS",
+  "name": "SAS",
   "version": "0.1.0",
-  "description": "TeamSearch file server",
+  "description": "Simple Attached Server",
   "scripts": {
     "start": "MODE=production node server",
     "test": "test"
@@ -12,13 +12,14 @@
     "q": "^1.4.1"
   },
   "keywords": [
-    "teamsearch",
+    "sas",
     "fileserver",
-    "nodefileserver"
+    "nodefileserver",
+    "staticserver"
   ],
-  "author": "TeamSearch team",
+  "author": "RedBoll",
   "repository": {
-    "url": "https://bitbucket.org/thefriendsteam/teamsearch-fs"
+    "url": "https://bitbucket.org/redboll/sas"
   },
   "license": "MIT"
 }
