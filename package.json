@@ -1,0 +1,24 @@
+{
+  "name": "TeamSearch-FS",
+  "version": "0.1.0",
+  "description": "TeamSearch file server",
+  "scripts": {
+    "start": "MODE=production node server",
+    "test": "test"
+  },
+  "dependencies": {
+    "nconf": "^0.8.3",
+    "chalk": "^1.1.3",
+    "q": "^1.4.1"
+  },
+  "keywords": [
+    "teamsearch",
+    "fileserver",
+    "nodefileserver"
+  ],
+  "author": "TeamSearch team",
+  "repository": {
+    "url": "https://bitbucket.org/thefriendsteam/teamsearch-fs"
+  },
+  "license": "MIT"
+}
