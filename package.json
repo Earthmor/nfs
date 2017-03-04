@@ -15,11 +15,19 @@
     "sas",
     "fileserver",
     "nodefileserver",
-    "staticserver"
+    "staticserver",
+    "attachserver"
   ],
   "author": "RedBoll",
   "repository": {
-    "url": "https://bitbucket.org/redboll/sas"
+    "type": "git",
+    "url": "https://bitbucket.org/redboll/sas.git"
+  },
+  "bugs": {
+    "url": "https://bitbucket.org/redboll/sas/issues"
+  },
+  "homepage": {
+    "url": "https://bitbucket.org/redboll/sas/issues"
   },
   "license": "MIT"
 }
