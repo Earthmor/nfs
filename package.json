@@ -1,9 +1,9 @@
 {
-  "name": "SAS",
+  "name": "cf-server",
   "version": "0.1.0",
-  "description": "Simple Attached Server",
+  "description": "File Server witch support Cache",
   "scripts": {
-    "start": "MODE=production node server",
+    "start": "node server",
     "test": "test"
   },
   "dependencies": {
@@ -21,13 +21,13 @@
   "author": "RedBoll",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/redboll/sas.git"
+    "url": "https://bitbucket.org/redboll/cfs.git"
   },
   "bugs": {
-    "url": "https://bitbucket.org/redboll/sas/issues"
+    "url": "https://bitbucket.org/redboll/cfs/issues"
   },
   "homepage": {
-    "url": "https://bitbucket.org/redboll/sas/issues"
+    "url": "https://bitbucket.org/redboll/cfs/issues"
   },
   "license": "MIT"
 }
