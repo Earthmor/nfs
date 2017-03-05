@@ -2,7 +2,7 @@ const http = require('http');
 const chalk = require('chalk');
 
 const config = require('./libs/config');
-const staticFileServer = require('./libs/static-file-server');
+const staticFileServer = require('./index.js');
 
 const mode = process.env.MODE;
 

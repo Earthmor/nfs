@@ -1,8 +1,3 @@
-// ------------------------------------------------------------------------------------------------------------------ //
-// -----------------------------------------------PREPARE ENVIRONMENT------------------------------------------------ //
-// ------------------------------------------------------------------------------------------------------------------ //
-
-// Module dependence
 const fileSystem = require('fs');
 const url = require('url');
 const stream = require('stream');
@@ -10,22 +5,17 @@ const util = require('util');
 const crypto = require('crypto');
 const Q = require('q');
 
-// Our utility modules
-const mimeTypes = require('./mime-types');
-const ContentCache = require('./content-cache').ContentCache;
-const ETagStream = require('./etag.stream').ETagStream;
-const BufferReadStream = require('./buffer-read-stream').BufferReadStream;
-const BufferWriteStream = require('./buffer-write-stream').BufferWriteStream;
+const mimeTypes = require('./libs/mime-types');
+const ContentCache = require('./libs/content-cache').ContentCache;
+const ETagStream = require('./libs/etag.stream').ETagStream;
+const BufferReadStream = require('./libs/buffer-read-stream').BufferReadStream;
+const BufferWriteStream = require('./libs/buffer-write-stream').BufferWriteStream;
 
 exports.createServer = function (config) {
     return new StaticFileServer(config);
 };
 
 exports.StaticFileServer = StaticFileServer;
-
-// ------------------------------------------------------------------------------------------------------------------ //
-// --------------------------------------------------CREATE SERVER--------------------------------------------------- //
-// ------------------------------------------------------------------------------------------------------------------ //
 
 var fileSystemStat = Q.nbind(fileSystem.stat, fileSystem);
 
@@ -37,10 +27,6 @@ function StaticFileServer(config) {
 
 StaticFileServer.prototype = {
     constructor: StaticFileServer,
-
-    //-----------------------
-    //-------- Public methods
-    //-----------------------
 
     serveFile: function (request, response) {
         var server = this;
@@ -64,7 +50,7 @@ StaticFileServer.prototype = {
                 }
 
                 response.setHeader('Content-Type', mimeTypes.getFromFilePath(resolution.scriptName));
-                response.setHeader('Content-Length', resolution.stat.size);
+                response.setHeader('Content-Length', resolution.stat.size); 
 
                 if (server._config.maxAge) {
                     response.setHeader('Cache-Control', 'max-age=' + server._config.maxAge);
@@ -125,10 +111,6 @@ StaticFileServer.prototype = {
             }
         );
     },
-
-    //-----------------------
-    //------- Private methods
-    //-----------------------
 
     _resolvePath: function(path){
         path = decodeURIComponent(path.replace(/\\/g, '/'));

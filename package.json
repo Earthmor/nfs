@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "File Server witch support Cache",
   "scripts": {
-    "start": "node server",
+    "start": "node usages",
     "test": "test"
   },
   "dependencies": {
@@ -12,16 +12,16 @@
     "q": "^1.4.1"
   },
   "keywords": [
-    "sas",
-    "fileserver",
-    "nodefileserver",
-    "staticserver",
-    "attachserver"
+    "cfs",
+    "cf-server",
+    "file server",
+    "node file server",
+    "static server",
+    "attach server"
   ],
   "author": "RedBoll",
   "repository": {
-    "type": "git",
-    "url": "https://bitbucket.org/redboll/cfs.git"
+    "url": "https://bitbucket.org/redboll/cfs"
   },
   "bugs": {
     "url": "https://bitbucket.org/redboll/cfs/issues"

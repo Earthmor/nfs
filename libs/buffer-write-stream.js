@@ -18,18 +18,10 @@ util.inherits(BufferWriteStream, stream.Writable);
 BufferWriteStream.prototype = {
     constructor: BufferWriteStream,
 
-    //-----------------------
-    //-------- Public methods
-    //-----------------------
-
     destroy: function(){
         this._destroyed = true;
         this._buffers = null;
     },
-
-    //-----------------------
-    //------- Private methods
-    //-----------------------
 
     _handleFinish: function(){
         if(this._destroyed){

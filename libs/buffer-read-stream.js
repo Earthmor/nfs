@@ -21,19 +21,11 @@ util.inherits(BufferReadStream, stream.Readable);
 BufferReadStream.prototype = {
     constructor: BufferReadStream,
 
-    //-----------------------
-    //-------- Public methods
-    //-----------------------
-
     destroy: function(){
         this._source = null;
         this._index = null;
         this._length = null;
     },
-
-    //-----------------------
-    //------- Private methods
-    //-----------------------
 
     _read: function(size) {
         if(this._index < this._length){

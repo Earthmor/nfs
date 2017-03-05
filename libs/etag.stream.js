@@ -21,10 +21,6 @@ ETagStream.prototype = {
 
     constructor: ETagStream,
 
-    //-----------------------
-    //-------- Public methods
-    //-----------------------
-
     destroy: function(){
         if(this._destroyed) {
             return;
@@ -33,10 +29,6 @@ ETagStream.prototype = {
         this._etag = null;
         this._hasher = null;
     },
-
-    //-----------------------
-    //------- Private methods
-    //-----------------------
 
     _handleFinish: function(event){
         if(this._destroyed){

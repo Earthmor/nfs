@@ -8,10 +8,6 @@ ContentCache.prototype = {
 
     constructor: ContentCache,
 
-    //-----------------------
-    //-------- Public methods
-    //-----------------------
-
     getContent: function (scriptName, modifyAt) {
         var item = this._get(scriptName, modifyAt);
 
@@ -65,10 +61,6 @@ ContentCache.prototype = {
 
         return (etag);
     },
-
-    //-----------------------
-    //------- Private methods
-    //-----------------------
 
     _get: function (scriptName, modifyAt) {
         var item = this._cache[scriptName];
