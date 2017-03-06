@@ -3,6 +3,6 @@ var nconf = require('nconf');
 nconf
     .argv()
     .env()
-    .file('./config/tsconfig.json');
+    .file('./config/config.json');
 
 module.exports = nconf;

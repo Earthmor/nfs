@@ -1,12 +1,10 @@
 const http = require('http');
 const chalk = require('chalk');
 
-const config = require('./libs/config');
-const staticFileServer = require('./index.js');
+const config = require('./../libs/config');
+const staticFileServer = require('./../server.js');
 
-const mode = process.env.MODE;
-
-
+const mode = process.env.MODE || 'default';
 
 process.argv.forEach(function(val, index, array){
     console.log(index + ':' + val);
