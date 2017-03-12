@@ -1,9 +1,9 @@
 {
   "name": "cf-server",
   "version": "0.1.0",
-  "description": "File Server witch support Cache",
+  "description": "Simple File Server. Support Cache like eTag.",
   "scripts": {
-    "start": "node usages",
+    "start": "node ./bin/cf-server.js",
     "test": "test"
   },
   "main": "./server.js",
